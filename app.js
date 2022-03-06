@@ -1,23 +1,15 @@
-const addCart = document.getElementById('add-cart');
-addCart.addEventListener('click', () => {
+const addBtn = document.getElementById('add-cart');
+addBtn.addEventListener('click', () => {
     const inputField = document.getElementById('input-field');
-    const inputText = inputField.value;
-    // display input value;
-    displayInput(inputText);
-    //display local storage; 
+    const inputValue = inputField.value;
+    // display ui
+    displayInput(inputValue);
     inputField.value = '';
 });
 
-const displayInput = inputItem => {
+const displayInput = item => {
     const ul = document.getElementById('ul');
     const li = document.createElement('li');
-    li.innerText = inputItem;
+    li.innerText = item;
     ul.appendChild(li);
-};
-
-const getCart = () => {
-    const cart = localStorage.getItem('cart');
-    if(cart){
-        
-    }
 }
