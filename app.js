@@ -12,4 +12,16 @@ const displayInput = item => {
     const li = document.createElement('li');
     li.innerText = item;
     ul.appendChild(li);
+};
+
+const getCart = () => {
+    const cart = localStorage.getItem('cart');
+    let cartObj;
+    if(cart){
+        cartObj = JSON.parse(cart);
+    }
+    else {
+        cartObj = {};
+    }
+    return cartObj;
 }
